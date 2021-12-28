@@ -7,7 +7,8 @@ COPY src src
 RUN chmod +x ./gradlew
 RUN ./gradlew bootJAR
 
+
 FROM openjdk:18-jdk-alpine
 COPY --from=builder build/libs/*.jar app.jar
-EXPOSE 8081
+EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/app.jar"]
