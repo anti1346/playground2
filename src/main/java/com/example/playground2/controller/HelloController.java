@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HelloController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {
-        return "Hello, World! #38";
+        return "Hello, World! #39";
     }
 }
